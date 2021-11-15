@@ -4854,6 +4854,18 @@ namespace std
 		{
 			return units::unit_t<Units, T, NonLinearScale>(std::numeric_limits<T>::lowest());
 		}
+		static constexpr units::unit_t<Units, T, NonLinearScale> quiet_NaN()
+		{
+			return units::unit_t<Units, T, NonLinearScale>(std::numeric_limits<T>::quiet_NaN());
+		}
+		static constexpr units::unit_t<Units, T, NonLinearScale> signaling_NaN()
+		{
+			return units::unit_t<Units, T, NonLinearScale>(std::numeric_limits<T>::signaling_NaN());
+		}
+		static constexpr units::unit_t<Units, T, NonLinearScale> infinity()
+		{
+			return units::unit_t<Units, T, NonLinearScale>(std::numeric_limits<T>::infinity());
+		}
 		static constexpr bool is_integer = std::numeric_limits<T>::is_integer;
 		static constexpr bool is_signed = std::numeric_limits<T>::is_signed;
 	};
