@@ -4868,6 +4868,10 @@ namespace std
 		}
 		static constexpr bool is_integer = std::numeric_limits<T>::is_integer;
 		static constexpr bool is_signed = std::numeric_limits<T>::is_signed;
+		static constexpr bool has_quiet_NaN = std::numeric_limits<T>::has_quiet_NaN;
+		static constexpr bool has_signaling_NaN = std::numeric_limits<T>::has_signaling_NaN;
+		static constexpr bool has_infinity = std::numeric_limits<T>::has_infinity;
+
 	};
 }
 
